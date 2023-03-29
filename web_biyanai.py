@@ -36,10 +36,10 @@ map = {'Squamous cell carcinoma':0,'Undifferentiated carcinoma':1}
 Pathology_type =map[Pathology_type]
 # 数据读取，特征标注
 #%%load model
-ab_model = joblib.load(r'E:\Spyder_2022.3.29\output\machinel\sy_output\Nasopharyngeal_carcinoma_em\ab_biyanai_model.pkl')
+ab_model = joblib.load('ab_biyanai_model.pkl')
 
 #%%load data
-hp_train = pd.read_csv(r'E:\Spyder_2022.3.29\output\machinel\sy_output\Nasopharyngeal_carcinoma_em\github_biyanai_data.csv')
+hp_train = pd.read_csv('github_biyanai_data.csv')
 features =["Pathology_type","Hb","TG","TC","CA199",'Cyfra_21_1']
 target = 'M'
 y = np.array(hp_train[target])
